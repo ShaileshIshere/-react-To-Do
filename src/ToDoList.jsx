@@ -14,6 +14,7 @@ export default function ToDoList() {
         if(newTodo != "" && newTodo.length <= 20) {
             setTodo((prevTodo) => {
                 return [...prevTodo, {task: newTodo, id: uuidv4(), taskDone: false}]
+                console.log('I am here');
             });
             setNewTodo("");
         }

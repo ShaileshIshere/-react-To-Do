@@ -5,6 +5,7 @@ import LudoBoard from './ludoBoard.jsx';
 import ToDoList from './ToDoList.jsx';
 // import Lottery from './oldLogic/Lottery.jsx';
 import Lottery from './newBetterLogic/Lottery.jsx';
+import Forms from './forms/Forms.jsx';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       {/* <Lottery /> */}
 
       <Lottery n={3} winningSum={15} />
+
+      {/* <Forms /> */}
     </>
   )
 }
