@@ -32,6 +32,11 @@ export default function Forms() {
         setSubmittedName(formData.username); // Updates the state with the submitted name
     }
 
+    const [passwordShown, setPasswordShown] = useState(false);
+    let togglePasswordVisibility = () => {
+        setPasswordShown(!passwordShown);
+    };
+
     return(
         <>
             <h1>xlence forums</h1>
@@ -50,12 +55,17 @@ export default function Forms() {
                 <label htmlFor="password">password</label>
                 &nbsp; &nbsp;
                 <input 
-                    type="text" 
+                    type={passwordShown ? "text" : "password"} 
                     placeholder="Enter your password" 
                     value={formData.password} 
                     onChange={handleInputChange}
                     name="password"
                 />
+                &nbsp; &nbsp;
+                <button onClick={togglePasswordVisibility}>
+                    {passwordShown ? "Hide" : "Show"}
+                </button>
+
                 <br />
                 <br />
                 <button type="submit">Submit</button>
